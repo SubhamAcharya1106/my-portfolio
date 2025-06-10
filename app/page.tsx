@@ -1,10 +1,10 @@
 'use client';
 
-import Hero from './components/Hero';
-import About from './about/page';
-import Experience from './experience/page';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Hero from './components/ui/Hero';
+import About from './components/ui/About';
+import Experience from './components/ui/Experience';
+import Projects from './components/ui/Projects';
+import Contact from './components/ui/Contact';
 
 export default function Home() {
   return (

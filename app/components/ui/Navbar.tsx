@@ -15,28 +15,28 @@ export default function Navbar() {
         <h1 className="text-xl font-bold">Subham Acharya</h1>
         <ul className="flex gap-6 text-sm">
           <li>
-            <a href="#about" className="hover:text-pink-400 transition relative group">
+            <Link href="/#about" className="hover:text-pink-400 transition relative group">
               About
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-pink-400 group-hover:w-full transition-all duration-300" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#experience" className="hover:text-pink-400 transition relative group">
+            <Link href="/#experience" className="hover:text-pink-400 transition relative group">
               Experience
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-pink-400 group-hover:w-full transition-all duration-300" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#project" className="hover:text-pink-400 transition relative group">
+            <Link href="/#project" className="hover:text-pink-400 transition relative group">
               Projects
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-pink-400 group-hover:w-full transition-all duration-300" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="hover:text-pink-400 transition relative group">
+            <Link href="/#contact" className="hover:text-pink-400 transition relative group">
               Contact
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-pink-400 group-hover:w-full transition-all duration-300" />
-            </a>
+            </Link>
           </li>
           <li>
             <a

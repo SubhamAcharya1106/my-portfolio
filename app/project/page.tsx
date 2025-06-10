@@ -1,7 +1,7 @@
 'use client';
 
-import Projects from '../components/Projects';
-import Contact from '../components/Contact';
+import Projects from '../components/ui/Projects';
+import Contact from '../components/ui/Contact';
 
 export default function ProjectPage() {
   return (

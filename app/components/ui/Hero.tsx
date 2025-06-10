@@ -7,6 +7,7 @@ import { TypeAnimation } from 'react-type-animation';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import { useCallback } from 'react';
+import { BASE_PATH } from '../../lib/config';
 
 export default function Hero() {
   const particlesInit = useCallback(async (engine: any) => {
@@ -15,12 +16,11 @@ export default function Hero() {
 
   return (
     <motion.section
-      className="relative min-h-screen px-6 py-20 flex flex-col md:flex-row items-center justify-between overflow-hidden bg-gradient-to-br from-indigo-100 via-white to-indigo-200 dark:from-gray-900 dark:via-gray-800 dark:to-black"
+      className="relative min-h-screen px-6 pt-0 pb-0 flex flex-col md:flex-row items-center justify-between overflow-hidden bg-gradient-to-br from-indigo-100 via-white to-indigo-200 dark:from-gray-900 dark:via-gray-800 dark:to-black"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      {/* Glitter Particles */}
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -57,7 +57,6 @@ export default function Hero() {
         }}
       />
 
-      {/* Text Content */}
       <div className="relative z-10 flex-1 text-center md:text-left space-y-6">
         <motion.h1
           className="text-4xl sm:text-5xl font-bold leading-tight text-gray-900 dark:text-white"
@@ -93,7 +92,6 @@ export default function Hero() {
         />
       </div>
 
-      {/* Image */}
       <motion.div
         className="relative z-10 flex-1 mt-10 md:mt-0 flex justify-center"
         initial={{ opacity: 0, scale: 0.8 }}
@@ -102,7 +100,7 @@ export default function Hero() {
       >
         <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} perspective={1000}>
           <Image
-            src="/images/subham1.jpg"
+            src={`${BASE_PATH}/image/subham3.jpg`}
             alt="Subham Hero"
             width={320}
             height={320}
@@ -111,7 +109,6 @@ export default function Hero() {
         </Tilt>
       </motion.div>
 
-      {/* Custom shimmer animation styles */}
       <style jsx>{`
         .animate-shimmer {
           background-size: 200% auto;

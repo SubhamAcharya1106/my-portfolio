@@ -38,12 +38,26 @@ export default function Contact() {
         </motion.p>
 
         {/* ✅ Contact Form */}
-        <form
-          action="https://formspree.io/f/xanjqbyo"
-          method="POST"
-          onSubmit={() => setShowSuccessModal(true)}
-          className="space-y-5 text-left"
-        >
+       <form
+  action="https://formspree.io/f/xanjqbyo"
+  method="POST"
+  onSubmit={(e) => {
+    e.preventDefault(); // 
+    const form = e.target as HTMLFormElement;
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        Accept: 'application/json',
+      },
+    }).then(() => {
+      setShowSuccessModal(true);
+      form.reset(); 
+    });
+  }}
+>
           <input
             type="text"
             name="name"
